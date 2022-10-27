@@ -8,15 +8,15 @@ Test: "Values entered are all numbers."
 Code: ;
 Expected Output: 0
 
-Test: "It recognizes a single vowel regardless of case."
+Test: "Multiply every second number by 2."
 Code: vowelCounter("A");
 Expected Output: 1
 
-Test: "It recognizes a single vowel in a word with multiple characters."
+Test: "Check if second number multiplied by two is now a 2 digit number."
 Code: vowelCounter("cat");
 Expected Output: 1
 
-Test: "It recognizes multiple vowels in a single word."
+Test: "If second number multiplied by two is a 2 digit returns true, then add those two digits together."
 Code: vowelCounter("cater");
 Expected Output: 2
 

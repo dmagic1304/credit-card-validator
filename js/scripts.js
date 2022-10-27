@@ -13,18 +13,22 @@ function checkAllNumbers (inputNumbers) {
     return 0;
   }
   const creditCardNumbers = inputNumbers.trim().split("");
-  let newArray = [];
+  let doubledArray = [];
+  let normalArray = [];
     for (index = (creditCardNumbers.length - 1); index >= 0 ; index -= 2) {      
       let newNumber = creditCardNumbers[index] * 2;
       if (newNumber > 9) {
         let doubleDigit = String(newNumber).split('').reduce((acc, curr) => {return acc + Number(curr);},0);
-        newArray.push(doubleDigit);
+        doubledArray.push(doubleDigit);
         console.log('double digit result: ' + doubleDigit);
       } else {
-        newArray.push(newNumber);
+        doubledArray.push(newNumber);
       }
     }
-    console.log(newArray);
+    for (index = (creditCardNumbers.length); index >= 0 ; index -= 2) {
+      normalArray.push(creditCardNumbers[index]);
+    }
+    console.log(doubledArray, normalArray);
 }
 
 // const digitOne = (newNumber[0];
